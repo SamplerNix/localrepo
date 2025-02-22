@@ -25,7 +25,7 @@ class student{
     }
 };
 int main(){
-    string a="Nikhil";
+    string a="Hackor";
     myclass obj(2);
     student obj1(a,21,'A');
     return -1;
