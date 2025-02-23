@@ -1,4 +1,5 @@
 #include<iostream>
+#include<memory>
 using namespace std;
 class myclass{
     public:
@@ -39,6 +40,15 @@ void add(float x,float y){
     cout<<"sum of two floating numbe is :"<<sum<<endl;
 }
 };
+int memoryallocation(){
+    int *x;
+    x=new int;
+    *x=int (10);
+    cout<<"address value: "<<x<<endl;
+    cout<<"value of x: "<<*x<<endl;
+    delete x;
+    return -1;
+}
 
 int main(){
     string a="Hackor";
@@ -46,5 +56,6 @@ int main(){
     student obj1(a,21,'A');
     functionoverloading obj2;
     obj2.add(2.3,5);
+    memoryallocation();
     return -1;
 }
