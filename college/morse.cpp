@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Define the Morse code dictionary
+// map crea
 unordered_map<string, char> morseCodeMap = {
     {".-", 'A'}, {"-...", 'B'}, {"-.-.", 'C'}, {"-..", 'D'}, {".", 'E'}, 
     {"..-.", 'F'}, {"--.", 'G'}, {"....", 'H'}, {"..", 'I'}, {".---", 'J'},
@@ -17,12 +17,12 @@ unordered_map<string, char> morseCodeMap = {
     {"-----", '0'}
 };
 
-// Function to convert Morse code to normal text
+// Function jo 
 string morseToText(string morseCode) {
     stringstream ss(morseCode);
     string word, result;
 
-    // Split the Morse code into words
+    //  divide kr rha hai morse
     while (getline(ss, word, '/')) {
         // Split each word into individual Morse characters
         stringstream wordStream(word);
@@ -42,11 +42,17 @@ string morseToText(string morseCode) {
 }
 
 int main() {
-    // Example Morse code input
-    string morseInput = ".- --- ... / -.-. --- -.. .";
+    string morseInput;
 
-    cout << "Morse Code: " << morseInput << endl;
+    // Prompt the user for Morse code input
+    cout << "Enter Morse code (use spaces between letters and '/' between words): ";
+    getline(cin, morseInput);
+
+    // Convert Morse code to normal text
     string normalText = morseToText(morseInput);
+
+    // Display the result
+    cout << "Morse Code: " << morseInput << endl;
     cout << "Normal Text: " << normalText << endl;
 
     return 0;
